@@ -39,6 +39,7 @@ isset($_SESSION["user"]) or die('No acces allowed!');
                 <input type="text" name="author" id="author">
                 <label for="content">Tartalom:</label>
                 <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                <button type="submit" name="submitted" value="ok" id="btn">Cikk létrehozása!</button>
             </form>
         </div>
     </div>
