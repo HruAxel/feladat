@@ -24,7 +24,7 @@ session_start();
         </nav>
     </div>
     <div class="form_area">
-        <form action="/PROG/feladat/process/admin_log_process.php" method="post">
+        <form action="../feladat/process/admin_log_process.php" method="post">
 
             <h2>Üdvözöljük, a továbbiakhoz jelentkezzen be!</h2>
 

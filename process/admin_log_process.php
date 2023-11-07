@@ -33,7 +33,7 @@ if (isset($_POST["submitted"])) {
             header("location:" . $_SERVER["HTTP_REFERER"]);
         } else {
             $_SESSION["user"] = $user;
-            header("location: /PROG/feladat/admin_page.php");
+            header("location: ../admin_page.php");
             exit;
         }
     } else {
