@@ -33,12 +33,38 @@ isset($_SESSION["user"]) or die('No acces allowed!');
     <div class="container">
         <div class="content">
             <form action="../feladat/process/admin_page_process.php" method="post">
+
+
+
+                <?php
+                if (isset($_SESSION["success"])) {
+                    print "<li class=\"success\">{$_SESSION["success"]}</li>";
+
+                    unset($_SESSION["success"]);
+                }
+                ?>
+
                 <label for="title">Cím:</label>
-                <input type="text" name="title" id="title">
+                <?php
+                if (isset($_SESSION["errors"]["title"])) {
+                    print "<li class=\"error\">{$_SESSION["errors"]["title"]}</li>";
+                }
+                ?>
+                <input type="text" name="title" id="title" value="<?php print $_SESSION["post"] ["title"] ?? ''?>">
                 <label for="author">Szerző:</label>
-                <input type="text" name="author" id="author">
+                <?php
+                if (isset($_SESSION["errors"]["author"])) {
+                    print "<li class=\"error\">{$_SESSION["errors"]["author"]}</li>";
+                }
+                ?>
+                <input type="text" name="author" id="author" value="<?php print $_SESSION["post"] ["author"] ?? ''?>">
                 <label for="content">Tartalom:</label>
-                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                <?php
+                if (isset($_SESSION["errors"]["content"])) {
+                    print "<li class=\"error\">{$_SESSION["errors"]["content"]}</li>";
+                }
+                ?>
+                <textarea name="content" id="content" cols="30" rows="10" value="<?php print $_SESSION["post"] ["content"] ?? ''?>"></textarea>
                 <button type="submit" name="submitted" value="ok" id="btn">Cikk létrehozása!</button>
             </form>
         </div>
@@ -51,3 +77,6 @@ isset($_SESSION["user"]) or die('No acces allowed!');
 </body>
 
 </html>
+<?php
+unset($_SESSION["errors"], $_SESSION["success"], $_SESSION["post"]);
+?>

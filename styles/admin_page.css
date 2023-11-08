@@ -130,3 +130,15 @@ input {
     border: 1px solid gray;
     padding: 10px;
   }
+
+  .error {
+    color: red;
+    list-style: none;
+    font-weight: bold;
+  }
+  
+  .success {
+    color: green;
+    list-style: none;
+    font-weight: bold;
+  }
