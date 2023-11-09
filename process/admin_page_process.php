@@ -24,8 +24,20 @@ if(isset($_POST["submitted"])) {
         $errors["title"] = 'Kötelező címet megadni!';
     }
 
+    if(strlen($title) >= 99) {
+        $errors["title"] = 'A cím túl hosszú!';
+    }
+
     if(strlen($author) <= 0) {
         $errors["author"] = 'Kötelező szerzőt megadni!';
+    }
+
+    if(strlen($author) >= 19) {
+        $errors["author"] = 'A szerzői név túl hosszú!';
+    }
+
+    if(strlen($preview) <= 0) {
+        $errors["preview"] = 'Kötelező bevezető szöveget megadni!';
     }
 
     if(strlen($content) < 100) {

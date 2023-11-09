@@ -124,7 +124,7 @@ h2 {
 .title {
     margin: 0;
     transition: all 0.9s ease;
-    
+
 }
 .title:active {
     scale: 0.6;
@@ -171,6 +171,8 @@ div .title:hover::after {
 
 p {
     color: black;
+    font-size: 25px;
+    
 }
 a {
     text-decoration: none;

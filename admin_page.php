@@ -25,8 +25,9 @@ isset($_SESSION["user"]) or die('No acces allowed!');
     <div class="nav_bar">
         <nav>
             <h2>Morning News - Admin</h2>
+            <a href="../feladat/admin_edit_page.php" class="nav_btn">Cikkek</a>
             <h1 style="text-align: center;">Kedves <?php print $_SESSION["user"]["name"] ?> jelenleg be vagy lépve.</h1>
-            <a href="../feladat/process/admin_logout.php" id="nav_btn">Kilépés</a>
+            <a href="../feladat/process/admin_logout.php" class="nav_btn">Kilépés</a>
         </nav>
     </div>
 
@@ -59,6 +60,11 @@ isset($_SESSION["user"]) or die('No acces allowed!');
                 ?>
                 <input type="text" name="author" id="author" value="<?php print $_SESSION["post"] ["author"] ?? ''?>">
                 <label for="preview">Bevezető szöveg</label>
+                <?php
+                if (isset($_SESSION["errors"]["preview"])) {
+                    print "<li class=\"error\">{$_SESSION["errors"]["preview"]}</li>";
+                }
+                ?>
                 <textarea name="preview" id="preview" cols="30" rows="10" value="<?php print $_SESSION["post"] ["preview"] ?? ''?>"></textarea>
 
                 <label for="content">Tartalom:</label>
