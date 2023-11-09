@@ -9,7 +9,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: rgb(243, 243, 0);
+    background-color: orange;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -80,7 +80,7 @@ h3 {
     display: none;
     z-index: 2;
     position: absolute;
-    background-color: rgb(243, 243, 0);
+    background-color: orange;
 }
 
 form {
@@ -104,7 +104,7 @@ input {
     transition-duration: 0.3s;
     text-align: center;
     box-shadow: 5px 5px 0px 0px gray;
-    background-color: rgb(243, 243, 0);
+    background-color: orange;
 }
 input:not(:placeholder-shown) {
     background-color: white;

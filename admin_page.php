@@ -58,6 +58,9 @@ isset($_SESSION["user"]) or die('No acces allowed!');
                 }
                 ?>
                 <input type="text" name="author" id="author" value="<?php print $_SESSION["post"] ["author"] ?? ''?>">
+                <label for="preview">Bevezető szöveg</label>
+                <textarea name="preview" id="preview" cols="30" rows="10" value="<?php print $_SESSION["post"] ["preview"] ?? ''?>"></textarea>
+
                 <label for="content">Tartalom:</label>
                 <?php
                 if (isset($_SESSION["errors"]["content"])) {
@@ -66,7 +69,7 @@ isset($_SESSION["user"]) or die('No acces allowed!');
                 ?>
                 <textarea name="content" id="content" cols="30" rows="10" value="<?php print $_SESSION["post"] ["content"] ?? ''?>"></textarea>
                 <button type="submit" name="submitted" value="ok" id="btn">Cikk létrehozása!</button>
-            </form>
+            </form> 
         </div>
     </div>
 

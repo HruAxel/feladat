@@ -8,6 +8,7 @@ if(isset($_POST["submitted"])) {
 
     $title = $_POST["title"];
     $author = $_POST["author"];
+    $preview = $_POST["preview"];
     $content = $_POST["content"];
 
     $errors = [];
@@ -33,8 +34,8 @@ if(isset($_POST["submitted"])) {
 
     if(count($errors) === 0) {
 
-        mysqli_query($connection, "INSERT INTO `content` (`title`, `author`, `content_text`, `created_at`, `updated_at`) 
-        VALUES ('$title', '$author', '$content', current_timestamp(), NULL)");
+        mysqli_query($connection, "INSERT INTO `content` (`title`, `author`, `preview`, `content_text`,  `created_at`, `updated_at`) 
+        VALUES ('$title', '$author', '$preview', '$content', current_timestamp(), NULL)");
 
         header("location:" . $_SERVER["HTTP_REFERER"]);
 
