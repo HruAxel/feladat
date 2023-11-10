@@ -37,8 +37,9 @@ nav a {
     color: rgb(0, 0, 0);
     font-size: 25px;
     padding: 5px;
-    transition: all 0.3s ease;
+    
     text-transform: uppercase;
+    
 }
 
 .item:hover {
@@ -194,4 +195,49 @@ a {
 
 .close:hover {
     text-decoration: underline;
+}
+
+
+/* RESP */
+
+@media (max-width: 1200px) {
+    nav {
+        padding: 0px 20px 0px 20px ;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+    nav a h2 {
+        margin: 0;
+    }
+    .articles {
+        width: 80%;
+    }
+    /* h2 {
+        
+    } */
+
+    .item {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .articles a h2 {
+        font-size: 25px;
+    }
+
+    .article .preview_div .preview h3 {
+        font-size: 20px;
+    }
+
+    .articles .content_container p {
+        font-size: 16px;
+    }
+
 }

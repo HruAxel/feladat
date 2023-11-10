@@ -73,7 +73,7 @@ isset($_SESSION["user"]) or die('No acces allowed!');
                     print "<li class=\"error\">{$_SESSION["errors"]["content"]}</li>";
                 }
                 ?>
-                <textarea name="content" id="content" cols="30" rows="10" value="<?php print $_SESSION["post"] ["content"] ?? ''?>"></textarea>
+                <textarea name="content" id="content" cols="30" rows="10" value="<?php print $_SESSION["post"] ["content"]?>"></textarea>
                 <button type="submit" name="submitted" value="ok" id="btn">Cikk létrehozása!</button>
             </form> 
         </div>
