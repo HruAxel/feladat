@@ -1,0 +1,156 @@
+/* GENERAL SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100wv;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+
+.nav_bar {
+    width: 100%;
+
+
+}
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px 0px 40px ;
+}
+
+.nav_btn {
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 60px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.nav_btn:hover {
+    background-color: rgb(255, 255, 255);
+    scale: 1.1;
+    box-shadow: 0px 5px 5px 0px gray;
+}
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: orange;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    padding: 0px 10px 10px 10px;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+/* FORM */
+
+
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 80px 80px 80px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 5px 5px 0px 0px orange;
+    border: 1px solid gray;
+}
+
+#btn {
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background-color: green;
+
+}
+
+#btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    scale: 1.1;
+    box-shadow: 0px 5px 5px 0px gray;
+  }
+
+  #btn:active {
+    scale: 0.9;
+}
+
+  #content {
+    resize: none;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(241, 241, 241);
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px 0px orange;
+    border: 1px solid gray;
+    padding: 10px;
+  }
+
+  #preview {
+    resize: none;
+    width: 40%;
+    background-color: rgb(241, 241, 241);
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px 0px orange;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  .error {
+    color: red;
+    list-style: none;
+    font-weight: bold;
+  }
+  
+  .success {
+    color: green;
+    list-style: none;
+    font-weight: bold;
+  }

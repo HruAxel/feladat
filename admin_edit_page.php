@@ -41,12 +41,14 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
                 print "<div class=\"articles\" id=\"cikk_{$cikk["id"]}\">
                 <a href=\"#cikk_{$cikk["id"]}\"><h2 class=\"title\">{$cikk["title"]}</h2></a>
 
-                
+                <div class=\"buttons\">
                 <form action=\"../feladat/process/admin_edit_delete_process.php\" method=\"post\">
                 <input type=\"submit\" class=\"delete\" value=\"TÖRLÉS\">
                 <input type=\"hidden\" name=\"cikkId\" value=\"' {$cikk['id']} '\">
                 </form>
-                
+
+                <a href=\"../feladat/admin_update_page.php?id='{$cikk['id']}'\" class=\"update\">Szerkesztés</a>
+                </div>
 
                 <h4 class=\"author\">Szerző: {$cikk["author"]}</h4>
                 <div class=\"preview_div\"><h3 class=\"preview\">{$cikk["preview"]}</h3></div>
