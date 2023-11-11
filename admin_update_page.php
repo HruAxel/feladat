@@ -81,6 +81,19 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
                 ?>
                 <textarea name="content_text" id="content" cols="30" rows="10"><?php echo $cikk['content_text']; ?></textarea>
 
+                <label for="category">Kategória:</label>
+                <?php
+                if (isset($_SESSION["errors"]["category"])) {
+                    print "<li class=\"error\">{$_SESSION["errors"]["category"]}</li>";
+                }
+                ?>
+                <input list="category" name="category"  value="<?php print $_SESSION["post"] ["category"] ?? ''?>">
+                <datalist id="category">
+                    <option value="Külföld"></option>
+                    <option value="Gazdaság"></option>
+                    <option value="Tudomány"></option>
+                </datalist>
+
                 <button type="submit" name="submitted" value="ok" class="update" id="btn">Cikk módosítása!</button>
             </form> 
         </div>

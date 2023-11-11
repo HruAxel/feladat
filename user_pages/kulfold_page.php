@@ -26,7 +26,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
         <nav>
             <a href="../user_pages/user_page.php" class="item">Kezdőlap</a>
             <a href="../user_pages/kulfold_page.php" class="item">Külföld</a>
-            <a href="#">
+            <a href="../user_pages/user_page.php">
                 <h2 id="main_text">Morning News</h2>
             </a>
             <a href="../user_pages/gazdasag_page.php" class="item">Gazdaság</a>
