@@ -17,7 +17,7 @@ isset($_SESSION["user"]) or die('No acces allowed!');
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Cinzel+Decorative&family=MedievalSharp&family=MonteCarlo&family=Playfair+Display&family=Poppins:wght@100&display=swap');
     </style>
-    <title>Document</title>
+    <title>Morning News - Admin</title>
 </head>
 
 <body>
@@ -74,13 +74,24 @@ isset($_SESSION["user"]) or die('No acces allowed!');
                 }
                 ?>
                 <textarea name="content" id="content" cols="30" rows="10" value="<?php print $_SESSION["post"] ["content"]?>"></textarea>
+
+                <label for="category">Kategória:</label>
+                <?php
+                if (isset($_SESSION["errors"]["category"])) {
+                    print "<li class=\"error\">{$_SESSION["errors"]["category"]}</li>";
+                }
+                ?>
+                <input list="category" name="category"  value="<?php print $_SESSION["post"] ["category"] ?? ''?>">
+                <datalist id="category">
+                    <option value="Külföld"></option>
+                    <option value="Gazdaság"></option>
+                    <option value="Tudomány"></option>
+                </datalist>
+
                 <button type="submit" name="submitted" value="ok" id="btn">Cikk létrehozása!</button>
             </form> 
         </div>
     </div>
-
-
-
 
     <script src="../feladat/scripts/admin_page_script.js"></script>
 </body>

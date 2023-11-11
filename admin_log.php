@@ -13,7 +13,7 @@ session_start();
     </style>
     <link rel="stylesheet" href="../feladat/styles/admin_log.css">
     <script src="../feladat/scripts/jquery-3.7.0.js"></script>
-    <title>Admin Log</title>
+    <title>Bejelentkezés - Admin</title>
 </head>
 
 <body>

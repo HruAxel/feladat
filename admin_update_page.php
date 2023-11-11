@@ -18,7 +18,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Cinzel+Decorative&family=MedievalSharp&family=MonteCarlo&family=Playfair+Display&family=Poppins:wght@100&display=swap');
     </style>
-    <title>Document</title>
+    <title>Szerkesztő - Admin</title>
 </head>
 
 <body>

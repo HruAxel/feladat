@@ -10,6 +10,7 @@ if(isset($_POST["submitted"])) {
     $author = $_POST["author"];
     $preview = $_POST["preview"];
     $content = $_POST["content"];
+    $category = $_POST["category"];
 
     $errors = [];
 
@@ -44,10 +45,14 @@ if(isset($_POST["submitted"])) {
         $errors["content"] = 'Kérlek legalább 100 karakterből álljon a cikk!';
     }
 
+    if(strlen($category) <= 0) {
+        $errors["category"] = 'Kötelező megadni kategóriát!';
+    }
+
     if(count($errors) === 0) {
 
-        mysqli_query($connection, "INSERT INTO `content` (`title`, `author`, `preview`, `content_text`,  `created_at`, `updated_at`) 
-        VALUES ('$title', '$author', '$preview', '$content', current_timestamp(), NULL)");
+        mysqli_query($connection, "INSERT INTO `content` (`title`, `author`, `preview`, `content_text`, `category`, `created_at`, `updated_at`) 
+        VALUES ('$title', '$author', '$preview', '$content', '$category',  current_timestamp(), NULL)");
 
         header("location:" . $_SERVER["HTTP_REFERER"]);
 

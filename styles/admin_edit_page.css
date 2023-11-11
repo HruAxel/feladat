@@ -198,6 +198,7 @@ a {
     margin-left: 10px;
     background-color: #ffffff;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .update:hover {
