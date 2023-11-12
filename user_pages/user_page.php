@@ -17,7 +17,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Cinzel+Decorative&family=MedievalSharp&family=MonteCarlo&family=Playfair+Display&family=Poppins:wght@100&display=swap');
     </style>
     <script src="../scripts/jquery-3.7.0.js"></script>
-    <title>Document</title>
+    <title>Morning News</title>
 </head>
 
 <body>

@@ -8,3 +8,10 @@ $(window).ready(function () {
         
     }
 });
+// let width = $(window).width();
+//     if (width > 1024) {
+// $(document).ready(function() {
+//         $('.item').fadeIn(1000);
+//         $('#main_text').fadeIn(500);
+//          }
+// )};
