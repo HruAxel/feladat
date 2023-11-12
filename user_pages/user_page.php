@@ -38,7 +38,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
             <?php
             $sql = mysqli_query($connection,  "SELECT * FROM `content`;");
 
-            while($cikk = mysqli_fetch_assoc($sql)) {
+            while ($cikk = mysqli_fetch_assoc($sql)) {
                 print "<div class=\"articles\" id=\"cikk_{$cikk["id"]}\">
                 <a href=\"#cikk_{$cikk["id"]}\"><h2 class=\"title\">{$cikk["title"]}</h2></a>
                 <h4 class=\"author\">Szerző: {$cikk["author"]}</h4>

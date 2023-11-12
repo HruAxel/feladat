@@ -34,10 +34,10 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
 
     <div class="container">
         <div class="content">
-        <?php
+            <?php
             $sql = mysqli_query($connection,  "SELECT * FROM `content`;");
 
-            while($cikk = mysqli_fetch_assoc($sql)) {
+            while ($cikk = mysqli_fetch_assoc($sql)) {
                 print "<div class=\"articles\" id=\"cikk_{$cikk["id"]}\">
                 <a href=\"#cikk_{$cikk["id"]}\"><h2 class=\"title\">{$cikk["title"]}</h2></a>
 
@@ -61,7 +61,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
             ?>
         </div>
 
-        
+
     </div>
 
 

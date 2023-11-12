@@ -14,4 +14,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     header("location:" . $_SERVER["HTTP_REFERER"]);
 }
-

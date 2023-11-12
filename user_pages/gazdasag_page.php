@@ -21,7 +21,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
 </head>
 
 <body>
-<div class="nav_bar">
+    <div class="nav_bar">
         <nav>
             <a href="../user_pages/user_page.php" class="item">Kezdőlap</a>
             <a href="../user_pages/kulfold_page.php" class="item">Külföld</a>
@@ -39,10 +39,10 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
             $sql = mysqli_query($connection,  "SELECT * FROM `content`;");
 
 
-                while($cikk = mysqli_fetch_assoc($sql)) {
+            while ($cikk = mysqli_fetch_assoc($sql)) {
 
-                    if(isset($cikk["category"]) && $cikk["category"] == "Gazdaság") {
-                        print "<div class=\"articles\" id=\"cikk_{$cikk["id"]}\">
+                if (isset($cikk["category"]) && $cikk["category"] == "Gazdaság") {
+                    print "<div class=\"articles\" id=\"cikk_{$cikk["id"]}\">
                         <a href=\"#cikk_{$cikk["id"]}\"><h2 class=\"title\">{$cikk["title"]}</h2></a>
                         <h4 class=\"author\">Szerző: {$cikk["author"]}</h4>
                         <div class=\"preview_div\"><h3 class=\"preview\">{$cikk["preview"]}</h3></div>
@@ -51,9 +51,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
                             <a class=\"close\" href=\"#\">Bezárás</a>
                         </div>
                     </div>";
-                    }
-
-
+                }
             }
 
 

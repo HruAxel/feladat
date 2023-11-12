@@ -22,11 +22,11 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
 </head>
 
 <body>
-<?php
+    <?php
     $cikkId = $_GET['id'];
     $sql = mysqli_query($connection, "SELECT * FROM content WHERE id = $cikkId");
     $cikk = mysqli_fetch_assoc($sql);
-    ?> 
+    ?>
 
     <div class="nav_bar">
         <nav>
@@ -41,7 +41,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
         <div class="content">
             <form action="../feladat/process/admin_update_process.php" method="post">
 
-            <input type="hidden" name="cikkId" value="<?php echo $cikk['id']; ?>">
+                <input type="hidden" name="cikkId" value="<?php echo $cikk['id']; ?>">
 
                 <?php
                 if (isset($_SESSION["success"])) {
@@ -87,7 +87,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
                     print "<li class=\"error\">{$_SESSION["errors"]["category"]}</li>";
                 }
                 ?>
-                <input list="category" name="category"  value="<?php print $_SESSION["post"] ["category"] ?? ''?>">
+                <input list="category" name="category" value="<?php print $_SESSION["post"]["category"] ?? '' ?>">
                 <datalist id="category">
                     <option value="Külföld"></option>
                     <option value="Gazdaság"></option>
@@ -95,7 +95,7 @@ $connection = mysqli_connect("localhost", "root", "", "cikk");
                 </datalist>
 
                 <button type="submit" name="submitted" value="ok" class="update" id="btn">Cikk módosítása!</button>
-            </form> 
+            </form>
         </div>
     </div>
 

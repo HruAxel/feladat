@@ -39,6 +39,5 @@ if (isset($_POST["submitted"])) {
     } else {
         $_SESSION["errors"] = $errors;
         header("location:" . $_SERVER["HTTP_REFERER"]);
-    } 
-    
+    }
 }
